@@ -49,6 +49,8 @@ preprocessing_outputs/
 test_img/
 test.jpg
 
+uploads
+
 # --- Model-generated JSON outputs (regenerable from pipeline) ---
 detected_landmarks.json
 face_features.json

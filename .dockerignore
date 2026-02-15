@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Test / dev artifacts
+test_img/
+preprocessing_outputs/
+detected_landmarks.json
+face_features.json
+final_makeup_recommendations.json
+landmark_accuracy.py
+
+# Uploads (runtime generated)
+uploads/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Chroma store (rebuilt at runtime)
+chroma_store/
+
+# Misc
+README.md
+*.md

@@ -1,33 +1,36 @@
 import os
 import json
-import shutil
 import chromadb
 from sentence_transformers import SentenceTransformer
 
 # -----------------------------
-# ChromaDB setup
+# ChromaDB setup  (per-request, in-memory – no stale-UUID races)
 # -----------------------------
-CHROMA_PATH = os.path.join(os.path.dirname(__file__), "chroma_store")
+_client = None
+_collection = None
 
 
-def _init_chroma():
-    """Create a fresh ChromaDB collection, wiping stale state if needed."""
-    try:
-        c = chromadb.PersistentClient(path=CHROMA_PATH)
+def _get_collection(reset=False):
+    """Return the in-memory ChromaDB collection, creating it on first call.
+
+    Parameters
+    ----------
+    reset : bool
+        If True, drop the existing collection and create a fresh one
+        (used before re-indexing the knowledge base).
+    """
+    global _client, _collection
+    if _client is None:
+        _client = chromadb.EphemeralClient()
+    if reset:
         try:
-            c.delete_collection("features")
+            _client.delete_collection("features")
         except Exception:
             pass
-        return c, c.get_or_create_collection(name="features")
-    except Exception:
-        # Corrupted store → nuke and retry
-        if os.path.exists(CHROMA_PATH):
-            shutil.rmtree(CHROMA_PATH, ignore_errors=True)
-        c = chromadb.PersistentClient(path=CHROMA_PATH)
-        return c, c.get_or_create_collection(name="features")
-
-
-client, collection = _init_chroma()
+        _collection = _client.create_collection(name="features")
+    elif _collection is None:
+        _collection = _client.get_or_create_collection(name="features")
+    return _collection
 
 # -----------------------------
 # Helpers
@@ -39,6 +42,7 @@ def normalize(text):
 # Knowledge indexing
 # -----------------------------
 def index_knowledge(json_folder="./knowledge"):
+    col = _get_collection(reset=True)   # fresh collection each indexing run
     for filename in os.listdir(json_folder):
         if not filename.endswith(".json"):
             continue
@@ -60,7 +64,7 @@ def index_knowledge(json_folder="./knowledge"):
 
             doc_id = f"{feature}_{variant}_{i}"
 
-            collection.add(
+            col.add(
                 documents=[" ".join(steps)],
                 metadatas=[{
                     "id": doc_id,
@@ -165,6 +169,7 @@ def build_feature_queries(face_features):
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def retrieve_from_face_features(face_features, top_k=1):
+    col = _get_collection()              # reuse the already-indexed collection
     intents = build_feature_queries(face_features)
     seen = set()
     results_all = []
@@ -178,7 +183,7 @@ def retrieve_from_face_features(face_features, top_k=1):
         embedding = embedding_model.encode(intent["query"]).tolist()
 
         # Try feature + variant
-        results = collection.query(
+        results = col.query(
             query_embeddings=[embedding],
             n_results=top_k,
             where={
@@ -191,7 +196,7 @@ def retrieve_from_face_features(face_features, top_k=1):
 
         # fallback: feature-only
         if not results["documents"][0]:
-            results = collection.query(
+            results = col.query(
                 query_embeddings=[embedding],
                 n_results=top_k,
                 where={"feature": normalize(intent["feature"])}

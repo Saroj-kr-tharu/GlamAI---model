@@ -1,0 +1,98 @@
+[
+    {
+        "feature": "nose",
+        "variant": "soft_curve",
+        "technique": "curve-following contour",
+        "steps": [
+            "Trace contour along the natural curve of the bridge.",
+            "Highlight the highest point for lift.",
+            "Blend outward smoothly."
+        ],
+        "why_it_matches": "The soft-curve contour technique follows the natural shape of a nose with a subtle arch, enhancing its elegance without creating an unnatural look.",
+        "awareness": "Ensure that you do not overdo the highlighting to maintain balance and avoid drawing too much attention away from other facial features."
+    },
+    {
+        "feature": "eyes",
+        "variant": "round",
+        "technique": "outer corner elongation",
+        "steps": [
+            "Keep inner lid light.",
+            "Build depth on outer corner.",
+            "Add a lifted wing."
+        ],
+        "why_it_matches": "This technique suits a round eye shape as it helps to define and elongate the natural curve of the eyes, making them appear larger.",
+        "awareness": "Ensure not too much product is used in creating depth on the outer corner."
+    },
+    {
+        "feature": "face_shape",
+        "variant": "broad",
+        "technique": "lengthening contour and blush placement",
+        "steps": [
+            "Contour along the outer sides of the forehead and jaw to reduce width.",
+            "Place blush slightly above the apples and sweep upward toward the temples.",
+            "Highlight the center of the face to create vertical focus."
+        ],
+        "why_it_matches": "This technique suits a broad face because it helps to visually narrow the forehead and jawline by lengthening contour lines, making them appear more elongated. Additionally, placing blush above the apples emphasizes cheekbones without adding unnecessary width.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "lips",
+        "variant": "full",
+        "technique": "center highlight",
+        "steps": [
+            "Line natural lip edge.",
+            "Fill evenly.",
+            "Highlight center for fullness."
+        ],
+        "why_it_matches": "A center highlight technique accentuates the cupid's bow and adds depth to full lips, creating an illusion of volume.",
+        "awareness": "Be gentle while lining your lip edge for a natural look."
+    },
+    {
+        "feature": "brows",
+        "variant": "defined_arch",
+        "technique": "structured brow shaping",
+        "steps": [
+            "Outline the lower brow edge.",
+            "Build structure at the arch.",
+            "Clean the tail for a lifted finish."
+        ],
+        "why_it_matches": "This technique (structured brow shaping) suits the defined_arch brows by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "jawline",
+        "variant": "wide",
+        "technique": "jaw slimming contour",
+        "steps": [
+            "Apply contour on the outer edges of the jaw.",
+            "Blend backward toward the ears.",
+            "Keep the center of the chin lighter."
+        ],
+        "why_it_matches": "The technique of applying contour on the outer edges and blending it backward creates shadows that visually narrows a wide jawline, enhancing cheekbone prominence while maintaining balance.",
+        "awareness": "Ensure to select high-definition makeup brushes for precise application without overworking the contour."
+    },
+    {
+        "feature": "chin",
+        "variant": "prominent",
+        "technique": "chin minimization contour",
+        "steps": [
+            "Contour the lower edge of the chin.",
+            "Blend upward toward the jaw.",
+            "Avoid highlighting the chin tip."
+        ],
+        "why_it_matches": "Chin minimization contour techniques are suitable for a prominent chin because they draw attention away from the center of your face, creating an illusion of asymmetry and balance which can make the facial structure appear less dominant.",
+        "awareness": "Ensure that you blend well to avoid any harsh lines or color transitions."
+    },
+    {
+        "feature": "cheekbones",
+        "variant": "moderate",
+        "technique": "balanced blush and contour",
+        "steps": [
+            "Apply blush on the mid-cheek.",
+            "Contour lightly under the cheekbone.",
+            "Highlight the upper edge for dimension."
+        ],
+        "why_it_matches": "The balanced blush and contour technique highlights moderate cheekbones by adding warmth to the mid-cheeks, providing a natural lift underneeneredges while emphasizing dimension with highlighter. This approach ensures that the feature looks defined yet not overly prominent.",
+        "awareness": "Be careful when contouring too deeply as this can create an unnatural shadow effect on moderate cheekbones."
+    }
+]

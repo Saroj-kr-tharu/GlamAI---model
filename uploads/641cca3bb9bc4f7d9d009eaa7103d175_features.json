@@ -1,0 +1,61 @@
+{
+    "face_shape": {
+        "primary": "broad",
+        "secondary": null,
+        "ratio": 0.8
+    },
+    "face_symmetry": {
+        "level": "noticeable asymmetry",
+        "eye_alignment": 0.11290322580645161
+    },
+    "nose": {
+        "width": "wide",
+        "length": "short",
+        "tip": "soft curve",
+        "metrics": {
+            "width_ratio": 0.25806451612903225,
+            "length_ratio": 0.22580645161290322
+        }
+    },
+    "eyes": {
+        "shape": "round",
+        "orientation": "balanced",
+        "spacing": "wide-set",
+        "metrics": {
+            "eye_ratio": 0.8333333333333333,
+            "inter_eye_distance": 0.6064516129032258
+        }
+    },
+    "lips": {
+        "fullness": "full",
+        "secondary": null,
+        "balance": "balanced",
+        "contour": "pouty",
+        "metrics": {
+            "fullness_ratio": 0.16129032258064516,
+            "ul_lr_ratio": 1.0
+        }
+    },
+    "eyebrows": {
+        "arch": "defined arch",
+        "thickness": "natural",
+        "angle": 81.17493789003494
+    },
+    "jaw_chin": {
+        "jaw": "wide",
+        "chin_shape": "prominent",
+        "metrics": {
+            "jaw_width_ratio": 0.9548387096774194,
+            "chin_projection": 0.9838709677419355
+        }
+    },
+    "cheekbones": {
+        "prominence": "moderate",
+        "height": "high-set",
+        "definition": "natural",
+        "metrics": {
+            "prominence": 0.9548387096774194,
+            "height_ratio": 0.967741935483871
+        }
+    }
+}
