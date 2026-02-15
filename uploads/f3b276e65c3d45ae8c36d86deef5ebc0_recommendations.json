@@ -1,0 +1,98 @@
+[
+    {
+        "feature": "nose",
+        "variant": "soft_curve",
+        "technique": "curve-following contour",
+        "steps": [
+            "Trace contour along the natural curve of the bridge.",
+            "Highlight the highest point for lift.",
+            "Blend outward smoothly."
+        ],
+        "why_it_matches": "This technique (curve-following contour) suits the soft_curve nose by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "eyes",
+        "variant": "round",
+        "technique": "outer corner elongation",
+        "steps": [
+            "Keep inner lid light.",
+            "Build depth on outer corner.",
+            "Add a lifted wing."
+        ],
+        "why_it_matches": "This technique (outer corner elongation) suits the round eyes by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "face_shape",
+        "variant": "very_long",
+        "technique": "width-building placement",
+        "steps": [
+            "Contour the top of the forehead and bottom of the chin.",
+            "Apply blush straight across the cheeks.",
+            "Avoid vertical highlight lines."
+        ],
+        "why_it_matches": "This technique (width-building placement) suits the very_long face_shape by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "lips",
+        "variant": "natural",
+        "technique": "soft lip line",
+        "steps": [
+            "Trace natural lip line lightly.",
+            "Apply sheer tint.",
+            "Blend edges softly."
+        ],
+        "why_it_matches": "This technique (soft lip line) suits the natural lips by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "brows",
+        "variant": "defined_arch",
+        "technique": "structured brow shaping",
+        "steps": [
+            "Outline the lower brow edge.",
+            "Build structure at the arch.",
+            "Clean the tail for a lifted finish."
+        ],
+        "why_it_matches": "This technique (structured brow shaping) suits the defined_arch brows by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "jawline",
+        "variant": "wide",
+        "technique": "jaw slimming contour",
+        "steps": [
+            "Apply contour on the outer edges of the jaw.",
+            "Blend backward toward the ears.",
+            "Keep the center of the chin lighter."
+        ],
+        "why_it_matches": "This technique (jaw slimming contour) suits the wide jawline by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "chin",
+        "variant": "prominent",
+        "technique": "chin minimization contour",
+        "steps": [
+            "Contour the lower edge of the chin.",
+            "Blend upward toward the jaw.",
+            "Avoid highlighting the chin tip."
+        ],
+        "why_it_matches": "This technique (chin minimization contour) suits the prominent chin by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    },
+    {
+        "feature": "cheekbones",
+        "variant": "moderate",
+        "technique": "balanced blush and contour",
+        "steps": [
+            "Apply blush on the mid-cheek.",
+            "Contour lightly under the cheekbone.",
+            "Highlight the upper edge for dimension."
+        ],
+        "why_it_matches": "This technique (balanced blush and contour) suits the moderate cheekbones by enhancing natural features and maintaining balance.",
+        "awareness": "Apply products gently and blend well to maintain a natural look."
+    }
+]

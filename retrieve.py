@@ -1,19 +1,33 @@
 import os
 import json
+import shutil
 import chromadb
 from sentence_transformers import SentenceTransformer
 
 # -----------------------------
 # ChromaDB setup
 # -----------------------------
-client = chromadb.PersistentClient()
+CHROMA_PATH = os.path.join(os.path.dirname(__file__), "chroma_store")
 
-try:
-    client.delete_collection("features")
-except Exception:
-    pass
 
-collection = client.get_or_create_collection(name="features")
+def _init_chroma():
+    """Create a fresh ChromaDB collection, wiping stale state if needed."""
+    try:
+        c = chromadb.PersistentClient(path=CHROMA_PATH)
+        try:
+            c.delete_collection("features")
+        except Exception:
+            pass
+        return c, c.get_or_create_collection(name="features")
+    except Exception:
+        # Corrupted store → nuke and retry
+        if os.path.exists(CHROMA_PATH):
+            shutil.rmtree(CHROMA_PATH, ignore_errors=True)
+        c = chromadb.PersistentClient(path=CHROMA_PATH)
+        return c, c.get_or_create_collection(name="features")
+
+
+client, collection = _init_chroma()
 
 # -----------------------------
 # Helpers
