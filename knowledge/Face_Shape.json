@@ -1,0 +1,72 @@
+[
+  {
+    "id": "face_shape_broad",
+    "feature": "face_shape",
+    "variant": "broad",
+    "face_shape_scope": ["broad"],
+    "technique": "lengthening contour and blush placement",
+    "category": "tutorial",
+    "tags": ["contour", "blush", "balance"],
+    "steps": [
+      "Contour along the outer sides of the forehead and jaw to reduce width.",
+      "Place blush slightly above the apples and sweep upward toward the temples.",
+      "Highlight the center of the face to create vertical focus."
+    ]
+  },
+  {
+    "id": "face_shape_round",
+    "feature": "face_shape",
+    "variant": "round",
+    "face_shape_scope": ["round"],
+    "technique": "vertical sculpting",
+    "category": "tutorial",
+    "tags": ["contour", "lift"],
+    "steps": [
+      "Contour from the temples down under the cheekbones to create angles.",
+      "Place blush higher on the cheeks and blend upward.",
+      "Highlight the center of the face to add length."
+    ]
+  },
+  {
+    "id": "face_shape_oval",
+    "feature": "face_shape",
+    "variant": "oval",
+    "face_shape_scope": ["oval"],
+    "technique": "balanced enhancement",
+    "category": "tutorial",
+    "tags": ["balance", "natural"],
+    "steps": [
+      "Use light contour under cheekbones to maintain structure.",
+      "Apply blush on the mid-cheek and blend softly upward.",
+      "Highlight the cheekbones and center subtly."
+    ]
+  },
+  {
+    "id": "face_shape_long",
+    "feature": "face_shape",
+    "variant": "long",
+    "face_shape_scope": ["long"],
+    "technique": "horizontal balancing",
+    "category": "tutorial",
+    "tags": ["width", "balance"],
+    "steps": [
+      "Contour the forehead hairline and chin to reduce length.",
+      "Place blush horizontally across the cheeks.",
+      "Highlight cheekbones rather than the center."
+    ]
+  },
+  {
+    "id": "face_shape_very_long",
+    "feature": "face_shape",
+    "variant": "very_long",
+    "face_shape_scope": ["very_long"],
+    "technique": "width-building placement",
+    "category": "tutorial",
+    "tags": ["width", "shortening"],
+    "steps": [
+      "Contour the top of the forehead and bottom of the chin.",
+      "Apply blush straight across the cheeks.",
+      "Avoid vertical highlight lines."
+    ]
+  }
+]

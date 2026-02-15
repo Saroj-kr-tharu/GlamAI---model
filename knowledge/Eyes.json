@@ -1,0 +1,80 @@
+[
+  {
+    "id": "eyes_round",
+    "feature": "eyes",
+    "variant": "round",
+    "technique": "outer corner elongation",
+    "category": "tutorial",
+    "tags": ["eyeshadow", "liner"],
+    "steps": [
+      "Keep inner lid light.",
+      "Build depth on outer corner.",
+      "Add a lifted wing."
+    ]
+  },
+  {
+    "id": "eyes_almond",
+    "feature": "eyes",
+    "variant": "almond",
+    "technique": "crease definition",
+    "category": "tutorial",
+    "tags": ["definition"],
+    "steps": [
+      "Apply light base over lid.",
+      "Define crease softly.",
+      "Extend liner slightly outward."
+    ]
+  },
+  {
+    "id": "eyes_hooded",
+    "feature": "eyes",
+    "variant": "hooded",
+    "technique": "lifted crease placement",
+    "category": "tutorial",
+    "tags": ["lift"],
+    "steps": [
+      "Apply shadow above natural crease.",
+      "Keep outer corner lifted.",
+      "Use thin eyeliner."
+    ]
+  },
+  {
+    "id": "eyes_close_set",
+    "feature": "eyes",
+    "variant": "close_set",
+    "technique": "inner corner brightening",
+    "category": "tutorial",
+    "tags": ["spacing"],
+    "steps": [
+      "Highlight inner corners.",
+      "Keep darker shades outward.",
+      "Avoid inner liner."
+    ]
+  },
+  {
+    "id": "eyes_wide_set",
+    "feature": "eyes",
+    "variant": "wide_set",
+    "technique": "inner lid depth",
+    "category": "tutorial",
+    "tags": ["balance"],
+    "steps": [
+      "Add depth near inner lid.",
+      "Keep outer lid softer.",
+      "Line inner lash area lightly."
+    ]
+  },
+  {
+    "id": "eyes_balanced",
+    "feature": "eyes",
+    "variant": "balanced",
+    "technique": "symmetry focused blending",
+    "category": "tutorial",
+    "tags": ["symmetry"],
+    "steps": [
+      "Apply shadow evenly.",
+      "Blend crease softly.",
+      "Keep liner symmetrical."
+    ]
+  }
+]

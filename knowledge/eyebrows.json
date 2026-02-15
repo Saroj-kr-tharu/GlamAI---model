@@ -1,0 +1,41 @@
+[
+  {
+    "id": "brows_straight",
+    "feature": "brows",
+    "variant": "straight",
+    "technique": "brow softening",
+    "category": "tutorial",
+    "tags": ["brows", "natural"],
+    "steps": [
+      "Brush brows upward and outward.",
+      "Fill sparse areas with hair-like strokes.",
+      "Soften the tail with blending."
+    ]
+  },
+  {
+    "id": "brows_soft_arch",
+    "feature": "brows",
+    "variant": "soft_arch",
+    "technique": "gentle arch shaping",
+    "category": "tutorial",
+    "tags": ["brows", "arch"],
+    "steps": [
+      "Define a gentle peak.",
+      "Use light strokes to maintain softness.",
+      "Blend through the tail smoothly."
+    ]
+  },
+  {
+    "id": "brows_defined_arch",
+    "feature": "brows",
+    "variant": "defined_arch",
+    "technique": "structured brow shaping",
+    "category": "tutorial",
+    "tags": ["brows", "structure"],
+    "steps": [
+      "Outline the lower brow edge.",
+      "Build structure at the arch.",
+      "Clean the tail for a lifted finish."
+    ]
+  }
+]

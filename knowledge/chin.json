@@ -1,0 +1,41 @@
+[
+  {
+    "id": "chin_pointed",
+    "feature": "chin",
+    "variant": "pointed",
+    "technique": "chin softening contour",
+    "category": "tutorial",
+    "tags": ["chin", "softening"],
+    "steps": [
+      "Contour the sides of the chin.",
+      "Blend outward into the jawline.",
+      "Highlight the center lightly for balance."
+    ]
+  },
+  {
+    "id": "chin_balanced",
+    "feature": "chin",
+    "variant": "balanced",
+    "technique": "subtle chin definition",
+    "category": "tutorial",
+    "tags": ["chin", "definition"],
+    "steps": [
+      "Apply a light contour under the chin.",
+      "Blend downward softly.",
+      "Add a subtle highlight to maintain symmetry."
+    ]
+  },
+  {
+    "id": "chin_prominent",
+    "feature": "chin",
+    "variant": "prominent",
+    "technique": "chin minimization contour",
+    "category": "tutorial",
+    "tags": ["chin", "minimize"],
+    "steps": [
+      "Contour the lower edge of the chin.",
+      "Blend upward toward the jaw.",
+      "Avoid highlighting the chin tip."
+    ]
+  }
+]

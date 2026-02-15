@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cheekbones_subtle",
+    "feature": "cheekbones",
+    "variant": "subtle",
+    "technique": "lifted blush placement",
+    "category": "tutorial",
+    "tags": ["blush", "lift"],
+    "steps": [
+      "Place blush slightly above the apples of the cheeks.",
+      "Blend upward toward the temples.",
+      "Add a soft highlight on the upper cheek."
+    ]
+  },
+  {
+    "id": "cheekbones_moderate",
+    "feature": "cheekbones",
+    "variant": "moderate",
+    "technique": "balanced blush and contour",
+    "category": "tutorial",
+    "tags": ["blush", "contour"],
+    "steps": [
+      "Apply blush on the mid-cheek.",
+      "Contour lightly under the cheekbone.",
+      "Highlight the upper edge for dimension."
+    ]
+  },
+  {
+    "id": "cheekbones_prominent",
+    "feature": "cheekbones",
+    "variant": "prominent",
+    "technique": "soft cheekbone sculpt",
+    "category": "tutorial",
+    "tags": ["sculpt"],
+    "steps": [
+      "Place blush slightly higher.",
+      "Contour gently under the cheekbone.",
+      "Highlight the highest point only."
+    ]
+  }
+]

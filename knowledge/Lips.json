@@ -1,0 +1,41 @@
+[
+  {
+    "id": "lips_full",
+    "feature": "lips",
+    "variant": "full",
+    "technique": "center highlight",
+    "category": "tutorial",
+    "tags": ["dimension"],
+    "steps": [
+      "Line natural lip edge.",
+      "Fill evenly.",
+      "Highlight center for fullness."
+    ]
+  },
+  {
+    "id": "lips_defined_cupid",
+    "feature": "lips",
+    "variant": "defined_cupid_bow",
+    "technique": "cupid bow emphasis",
+    "category": "tutorial",
+    "tags": ["definition"],
+    "steps": [
+      "Outline cupid bow precisely.",
+      "Fill lips evenly.",
+      "Highlight above bow."
+    ]
+  },
+  {
+    "id": "lips_natural",
+    "feature": "lips",
+    "variant": "natural",
+    "technique": "soft lip line",
+    "category": "tutorial",
+    "tags": ["natural"],
+    "steps": [
+      "Trace natural lip line lightly.",
+      "Apply sheer tint.",
+      "Blend edges softly."
+    ]
+  }
+]

@@ -1,0 +1,77 @@
+# ========================
+# Python .gitignore
+# ========================
+
+# --- Byte-compiled / optimized / DLL files ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# --- Virtual environment ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Distribution / packaging ---
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# --- Environment & secrets (API keys, tokens, passwords) ---
+.env
+.env.*
+*.env
+secrets.*
+config.local.*
+
+# --- IDE / editor settings ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- ChromaDB local vector store (large & regenerable) ---
+chroma/
+chroma_store/
+
+# --- Preprocessing outputs & test images (user-specific data) ---
+preprocessing_outputs/
+test_img/
+test.jpg
+
+# --- Model-generated JSON outputs (regenerable from pipeline) ---
+detected_landmarks.json
+face_features.json
+final_makeup_recommendations.json
+
+# --- Jupyter Notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- Logs ---
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- pytest / coverage ---
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# --- mypy / type checking ---
+.mypy_cache/
+
+# --- Sentence-transformer model cache (downloaded at runtime) ---
+# Uncomment if you don't want to track cached models:
+# .cache/

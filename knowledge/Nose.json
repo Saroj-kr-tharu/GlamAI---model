@@ -1,0 +1,41 @@
+[
+  {
+    "id": "nose_rounded",
+    "feature": "nose",
+    "variant": "rounded",
+    "technique": "bridge slimming contour",
+    "category": "tutorial",
+    "tags": ["nose", "slimming"],
+    "steps": [
+      "Contour closer to the bridge to narrow appearance.",
+      "Blend the tip softly to avoid heaviness.",
+      "Highlight lightly down the center."
+    ]
+  },
+  {
+    "id": "nose_soft_curve",
+    "feature": "nose",
+    "variant": "soft_curve",
+    "technique": "curve-following contour",
+    "category": "tutorial",
+    "tags": ["nose", "definition"],
+    "steps": [
+      "Trace contour along the natural curve of the bridge.",
+      "Highlight the highest point for lift.",
+      "Blend outward smoothly."
+    ]
+  },
+  {
+    "id": "nose_defined",
+    "feature": "nose",
+    "variant": "defined",
+    "technique": "precision contour",
+    "category": "tutorial",
+    "tags": ["nose", "sharp"],
+    "steps": [
+      "Place contour slightly wider to sharpen edges.",
+      "Use a narrow highlight line.",
+      "Blend minimally to preserve structure."
+    ]
+  }
+]

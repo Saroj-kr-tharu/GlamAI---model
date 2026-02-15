@@ -1,0 +1,41 @@
+[
+  {
+    "id": "jawline_narrow",
+    "feature": "jawline",
+    "variant": "narrow",
+    "technique": "jawline definition",
+    "category": "tutorial",
+    "tags": ["jaw", "contour", "structure"],
+    "steps": [
+      "Apply contour along the jawline to add structure.",
+      "Blend downward slightly into the neck.",
+      "Keep the contour soft to avoid over-sharpening."
+    ]
+  },
+  {
+    "id": "jawline_balanced",
+    "feature": "jawline",
+    "variant": "balanced",
+    "technique": "soft jaw contour",
+    "category": "tutorial",
+    "tags": ["jaw", "balance"],
+    "steps": [
+      "Use a light contour just under the jawline.",
+      "Blend carefully for a natural finish.",
+      "Avoid harsh angles."
+    ]
+  },
+  {
+    "id": "jawline_wide",
+    "feature": "jawline",
+    "variant": "wide",
+    "technique": "jaw slimming contour",
+    "category": "tutorial",
+    "tags": ["jaw", "slimming"],
+    "steps": [
+      "Apply contour on the outer edges of the jaw.",
+      "Blend backward toward the ears.",
+      "Keep the center of the chin lighter."
+    ]
+  }
+]
