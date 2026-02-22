@@ -74,6 +74,5 @@ coverage.xml
 # --- mypy / type checking ---
 .mypy_cache/
 
-# --- Sentence-transformer model cache (downloaded at runtime) ---
-# Uncomment if you don't want to track cached models:
+
 # .cache/

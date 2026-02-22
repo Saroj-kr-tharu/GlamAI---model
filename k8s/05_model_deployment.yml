@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model-dep
+  namespace: glamai-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cms-model
+  template: 
+    metadata:
+      labels:
+        app: cms-model
+    spec:
+      containers:
+      - name: cms-model-container
+        image: sarojdockerworkspace/glamai-model:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        envFrom:
+          - configMapRef:
+              name: cms-config
+        env:
+          - name: REACT_APP_API_BASE_URL 
+            valueFrom:
+              configMapKeyRef:
+                name: cms-config
+                key: REACT_APP_API_BASE_URL
+
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

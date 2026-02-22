@@ -35,16 +35,17 @@ face_features.json
 final_makeup_recommendations.json
 landmark_accuracy.py
 
-# Uploads (runtime generated)
+# Uploads 
 uploads/
 
 # OS
 Thumbs.db
 .DS_Store
 
-# Chroma store (rebuilt at runtime)
+# Chroma store 
 chroma_store/
 
 # Misc
 README.md
 *.md
+

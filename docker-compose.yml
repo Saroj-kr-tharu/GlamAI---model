@@ -20,7 +20,7 @@ services:
       - OLLAMA_HOST=http://ollama:11434
     restart: "no"
 
-  # ── Face Analysis Flask API ──
+  # ── GlamAi Flask API ──
   face-api:
     build: .
     ports:
@@ -32,6 +32,10 @@ services:
     depends_on:
       - ollama
       - ollama-pull
+    deploy:
+      resources:
+        limits:
+          memory: 2g        # prevent runaway OOM; raise if needed
     restart: unless-stopped
 
 volumes:
