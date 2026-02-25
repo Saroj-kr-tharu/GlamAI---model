@@ -123,7 +123,7 @@ pipeline{
         stage("k8s Deployment Restart"){ 
           steps{
              echo " k8s deploymnet restarting  "
-             sh "kubectl rollout restart deployment model-dep -n cms-ns"
+             sh "kubectl rollout restart deployment model-dep -n glamai-ns"
          } }
     }
 
