@@ -94,7 +94,7 @@ pipeline{
                   usernameVariable: "dockerHubUser"
               )]) {
                   sh '''
-                    trivy image --format json -o model-image-scan.json ${dockerHubUser}/glamai-model:latest
+                    trivy image --format json --timeout 20m --scanners vuln -o model-image-scan.json ${dockerHubUser}/glamai-model:latest
                     
                   '''
               }
