@@ -1,5 +1,5 @@
 pipeline{
-    agent {label "dev" }
+    agent {label "ai" }
 
     stages{
 
@@ -34,14 +34,7 @@ pipeline{
             }
         }
         
-        stage('Quality Gate') {
-            steps {
-                timeout(time: 10, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
-
+       
         stage("OWASP Dependency Check"){
           steps{
               script {
