@@ -35,7 +35,7 @@ def allowed_file(filename):
 #  Routes 
 @app.route("/", methods=["GET"])
 def health():
-    return jsonify({"status": "ok", "message": "GlamAi API is running by saroj kumar Tharu"}), 200
+    return jsonify({"status": "ok", "message": "GlamAi API is running by saroj "}), 200
 
 
 @app.route("/analyze", methods=["POST"])
