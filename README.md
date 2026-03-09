@@ -14,7 +14,7 @@
 
 ---
 
-*An   intelligent system that analyzes facial geometry from a single photo and delivers personalized, step-by-step makeup recommendations using computer vision, anthropometric science, and generative AI.*
+*An intelligent system that analyzes facial geometry from a single photo and delivers personalized, step-by-step makeup recommendations using computer vision, anthropometric science, and generative AI.*
 
 </div>
 
@@ -53,28 +53,11 @@
 
 ## 🏗 System Architecture
 
-```
-                              ┌──────────────────────────────────────────────┐
-  ┌──────────┐                │           GlamAI Model Service                │
-  │  Client   │───POST /analyze──▶│                                        │
-  │ (Browser/ │◀──JSON Response───│   ┌──────────────────────────────────┐  │
-  │  Mobile)  │                │   │       Processing Pipeline           │  │
-  └──────────┘                │   │                                      │  │
-                              │   │  Layer 1 ─▶ Landmark Extraction      │  │
-                              │   │       │     (MediaPipe · 478 pts)    │  │
-                              │   │       ▼                              │  │
-                              │   │  Layer 2 ─▶ Metric Calculation       │  │
-                              │   │       │     (Anthropometric Ratios)  │  │
-                              │   │       ▼                              │  │
-                              │   │  Layer 3 ─▶ Feature Classification   │  │
-                              │   │       │     (Rule-Based Classifier)  │  │
-                              │   │       ▼                              │  │
-                              │   │  Generation ─▶ RAG + LLM            │  │
-                              │   │       │  ChromaDB ◀── Knowledge Base │  │
-                              │   │       │  Ollama/Phi3 ◀── Prompts    │  │
-                              │   └───────┴──────────────────────────────┘  │
-                              └──────────────────────────────────────────────┘
-```
+<div align="center">
+
+![System Design](public/systemDesign.gif)
+
+</div>
 
 ### Layered Processing Model
 
@@ -210,8 +193,6 @@ Content-Type: multipart/form-data
 
 ### Multi-Stage Build
 
-The Dockerfile uses a **two-stage build** for a lean production image:
-
 ```
  ┌─────────────────────────────┐      ┌─────────────────────────────┐
  │   Stage 1: Builder           │      │   Stage 2: Runtime           │
@@ -253,38 +234,6 @@ curl -X POST -F "image=@photo.jpg" http://localhost:5000/analyze
 ## ☸️ Kubernetes Deployment
 
 GlamAI is production-deployed on a Kubernetes cluster with full orchestration, auto-scaling, and ingress routing.
-
-### Cluster Architecture
-
-```
- ┌──────────────────────────────────────────────────────────────┐
- │                   Kubernetes Cluster (KIND)                   │
- │                     k8s v1.34.2                               │
- ├──────────────────────────────────────────────────────────────┤
- │                                                              │
- │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
- │  │ Control Plane │  │   Worker 1   │  │   Worker 2   │       │
- │  │              │  │              │  │              │       │
- │  │  API Server   │  │  Model Pods  │  │  Model Pods  │       │
- │  │  Scheduler    │  │  (Replicas)  │  │  (Replicas)  │       │
- │  │  etcd         │  │              │  │              │       │
- │  └──────────────┘  └──────────────┘  └──────────────┘       │
- │                                       ┌──────────────┐       │
- │                                       │   Worker 3   │       │
- │                                       │              │       │
- │                                       │  Model Pods  │       │
- │                                       │  (Replicas)  │       │
- │                                       └──────────────┘       │
- │                                                              │
- │  ┌──────────────────────────────────────────────────────┐    │
- │  │               NGINX Ingress Controller                │    │
- │  │  /model/*  ──▶  cms-model-svc:3000                   │    │
- │  │  /server/* ──▶  cms-svc:3000                         │    │
- │  │  /*        ──▶  cms-frontend-svc:80                   │    │
- │  └──────────────────────────────────────────────────────┘    │
- │                                                              │
- └──────────────────────────────────────────────────────────────┘
-```
 
 ### K8s Resource Manifests
 
@@ -335,21 +284,11 @@ kubectl get hpa -n glamai-ns
 
 GlamAI uses a fully automated **Jenkins** pipeline with security scanning at every stage.
 
-### Pipeline Stages
+<div align="center">
 
-```
- ┌─────────┐    ┌───────────┐    ┌─────────┐    ┌─────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
- │  Clone  │───▶│ SonarQube │───▶│ Quality │───▶│  OWASP  │───▶│  Trivy   │──▶│  Docker  │───▶│  Push to │──▶│   K8s    │
- │  Code   │    │ Analysis  │    │  Gate   │    │  Check  │    │  FS Scan │    │  Build   │    │ DockerHub│    │ Restart  │
- └─────────┘    └───────────┘    └─────────┘    └─────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘
-                                                                                     │
-                                                                                     ▼
-                                                                               ┌──────────┐
-                                                                               │  Trivy   │
-                                                                               │ Image    │
-                                                                               │  Scan    │
-                                                                               └──────────┘
-```
+![CI/CD Pipeline](public/cicd.gif)
+
+</div>
 
 ### Stage Details
 
@@ -434,6 +373,10 @@ GlamAI---model/
 │   ├── jawline.json
 │   ├── Lips.json
 │   └── Nose.json
+│
+├── public/                    # Static assets
+│   ├── systemDesign.gif       # System architecture diagram
+│   └── cicd.gif               # CI/CD pipeline diagram
 │
 ├── face_landmarker.task       # MediaPipe model bundle (~29MB, Float16)
 │
